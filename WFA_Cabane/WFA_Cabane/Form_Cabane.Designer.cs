@@ -37,10 +37,10 @@
             // Lbl_Titre
             // 
             this.Lbl_Titre.AutoSize = true;
-            this.Lbl_Titre.Font = new System.Drawing.Font("Palatino Linotype", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Titre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Titre.Location = new System.Drawing.Point(53, 46);
             this.Lbl_Titre.Name = "Lbl_Titre";
-            this.Lbl_Titre.Size = new System.Drawing.Size(321, 29);
+            this.Lbl_Titre.Size = new System.Drawing.Size(341, 25);
             this.Lbl_Titre.TabIndex = 0;
             this.Lbl_Titre.Text = "Gestionnaire de cabane Suisse";
             // 
@@ -84,7 +84,7 @@
             this.Controls.Add(this.Btn_ListeCabane);
             this.Controls.Add(this.Lbl_Titre);
             this.Name = "Form_Cabane";
-            this.Text = "Cabane";
+            this.Text = "Cabanes Suisse";
             this.ResumeLayout(false);
             this.PerformLayout();
 
