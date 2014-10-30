@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 30 Octobre 2014 à 15:21
+-- Généré le :  Jeu 30 Octobre 2014 à 16:16
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `cabanes` (
   `Douche` tinyint(1) NOT NULL,
   `NbLits` int(11) NOT NULL,
   `GPS` varchar(100) COLLATE utf8_bin NOT NULL,
-  `Tarif` int(11) NOT NULL,
+  `Tarif` decimal(4,2) NOT NULL,
   `Commentaire` text COLLATE utf8_bin,
   PRIMARY KEY (`idCabane`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
