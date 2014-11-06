@@ -56,7 +56,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nom";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -106,7 +105,6 @@
             this.Lbl_GPS.Size = new System.Drawing.Size(152, 24);
             this.Lbl_GPS.TabIndex = 6;
             this.Lbl_GPS.Text = "GPS";
-            this.Lbl_GPS.Click += new System.EventHandler(this.label6_Click);
             // 
             // Form_AfficheDetail
             // 
