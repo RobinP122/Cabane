@@ -85,6 +85,7 @@
             this.Controls.Add(this.Lbl_Titre);
             this.Name = "Form_Cabane";
             this.Text = "Cabanes Suisse";
+            this.Load += new System.EventHandler(this.Form_Cabane_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
