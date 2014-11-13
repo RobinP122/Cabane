@@ -29,20 +29,20 @@ namespace WFA_Cabane
             MySqlConnection Conn = new MySqlConnection("Database=kyjk_cabaneGroupeC;server=kyjk.myd.infomaniak.com;User Id=kyjk_adminC;pwd=cabane14c");
             string requete = "SELECT Nom FROM cabanes WHERE idCabane = 1";
 
-        try
-        {
-           MySqlCommand req = new MySqlCommand(requete, Conn);
-           Conn.Open();
-           MySqlDataReader Requete = req.EndExecuteReader();
-           Requete.Read();
-           Lbl_Titre.Text = Requete.GetValue(0).ToString();
+            try
+            {
+               MySqlCommand req = new MySqlCommand(requete, Conn);
+               Conn.Open();
+               MySqlDataReader Requete = req.EndExecuteReader();
+               Requete.Read();
+               Lbl_Titre.Text = Requete.GetValue(0).ToString();
 
-           Conn.Close();
-        }
-        catch
-        {
-            Lbl_Titre.Text = "Erreur";            }
-        }
+               Conn.Close();
+            }
+            catch
+            {
+                Lbl_Titre.Text = "Erreur";     
+            }
 
         }
     }
