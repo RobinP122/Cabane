@@ -16,5 +16,10 @@ namespace WFA_Cabane
         {
             InitializeComponent();
         }
+
+        private void Form_ListeCabanes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
