@@ -19,11 +19,6 @@ namespace WFA_Cabane
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_Cabane_Load(object sender, EventArgs e)
         {
             MySqlConnection Conn = new MySqlConnection("Database=kyjk_cabaneGroupeC;server=kyjk.myd.infomaniak.com;User Id=kyjk_adminC;pwd=cabane14c");
