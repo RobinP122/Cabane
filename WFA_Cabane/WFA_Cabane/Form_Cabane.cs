@@ -33,7 +33,7 @@ namespace WFA_Cabane
             {
                MySqlCommand req = new MySqlCommand(requete, Conn);
                Conn.Open();
-               MySqlDataReader Requete = req.EndExecuteReader();
+               MySqlDataReader Requete = req.ExecuteReader();
                Requete.Read();
                Lbl_Titre.Text = Requete.GetValue(0).ToString();
 
