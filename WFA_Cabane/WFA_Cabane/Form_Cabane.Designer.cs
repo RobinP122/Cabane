@@ -46,6 +46,7 @@
             // 
             // Btn_ListeCabane
             // 
+            this.Btn_ListeCabane.Enabled = false;
             this.Btn_ListeCabane.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ListeCabane.Location = new System.Drawing.Point(58, 134);
             this.Btn_ListeCabane.Name = "Btn_ListeCabane";
@@ -56,6 +57,7 @@
             // 
             // Btn_ListeContact
             // 
+            this.Btn_ListeContact.Enabled = false;
             this.Btn_ListeContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ListeContact.Location = new System.Drawing.Point(58, 206);
             this.Btn_ListeContact.Name = "Btn_ListeContact";
@@ -86,7 +88,6 @@
             this.Controls.Add(this.Lbl_Titre);
             this.Name = "Form_Cabane";
             this.Text = "Cabanes Suisse";
-            this.Load += new System.EventHandler(this.Form_Cabane_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

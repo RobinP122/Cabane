@@ -19,18 +19,6 @@ namespace WFA_Cabane
             InitializeComponent();
         }
 
-        
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Form_Cabane_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Btn_Recherche_Click(object sender, EventArgs e)
         {
             Form_ListeCabanes ListeCabane = new Form_ListeCabanes();
