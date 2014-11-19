@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using MySql.Data.Types;
 
 namespace WFA_Cabane
 {
@@ -19,30 +17,23 @@ namespace WFA_Cabane
             InitializeComponent();
         }
 
-        ConnexionDB DB;
+<<<<<<< HEAD
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void Form_ListeCabanes_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+=======
         private void Form_ListeCabanes_Load(object sender, EventArgs e)
+>>>>>>> 59cce2b6c4ba866e0410f08536008738954634b6
         {
-            try
-            {
-                DB = new ConnexionDB();
 
-                MySqlDataReader Reader = DB.ExecuteSelectQuery("select Nom from Cabanes");
-                while (Reader.Read())
-                {
-                    LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());                        
-                }
-                
-            }
-            catch
-            {
-                MessageBox.Show("connexion à la base de données impossible");                
-            }
         }
     }
 }

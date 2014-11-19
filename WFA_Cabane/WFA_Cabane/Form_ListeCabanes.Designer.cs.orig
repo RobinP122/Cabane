@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_Recherche = new System.Windows.Forms.Button();
-            this.TxtBx_Recherche = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LstBx_ListeCabane = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Btn_Recherche
+            // button1
             // 
-            this.Btn_Recherche.Location = new System.Drawing.Point(296, 10);
-            this.Btn_Recherche.Name = "Btn_Recherche";
-            this.Btn_Recherche.Size = new System.Drawing.Size(136, 23);
-            this.Btn_Recherche.TabIndex = 0;
-            this.Btn_Recherche.Text = "Rechercher un cabane";
-            this.Btn_Recherche.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(296, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Rechercher un cabane";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // TxtBx_Recherche
+            // textBox1
             // 
-            this.TxtBx_Recherche.Location = new System.Drawing.Point(12, 12);
-            this.TxtBx_Recherche.Name = "TxtBx_Recherche";
-            this.TxtBx_Recherche.Size = new System.Drawing.Size(278, 20);
-            this.TxtBx_Recherche.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(278, 20);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox1
             // 
@@ -75,13 +77,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 473);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.TxtBx_Recherche);
-            this.Controls.Add(this.Btn_Recherche);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
             this.Name = "Form_ListeCabanes";
             this.Text = "Form_ListeCabanes";
+<<<<<<< HEAD
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_ListeCabanes_FormClosed);
+=======
             this.Load += new System.EventHandler(this.Form_ListeCabanes_Load);
             this.groupBox1.ResumeLayout(false);
+>>>>>>> 59cce2b6c4ba866e0410f08536008738954634b6
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,8 +94,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Btn_Recherche;
-        private System.Windows.Forms.TextBox TxtBx_Recherche;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox LstBx_ListeCabane;
     }

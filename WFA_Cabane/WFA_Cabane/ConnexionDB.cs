@@ -13,19 +13,32 @@ namespace WFA_Cabane
     {
         static MySqlConnection CnxDB = null;
 
-        public MySqlConnection connexion()
+
+        private MySqlConnection connexion()
         {
-            if (CnxDB == null){
-                CnxDB = new MySqlConnection("Database=cabanes;server=127.0.0.1;User Id=root;pwd=");             
-                CnxDB.Open();
+            if (CnxDB == null)
+            {
+                try
+                {
+                    CnxDB = new MySqlConnection("Database=cabanes;server=127.0.0.1;User Id=root;pwd=");
+                    CnxDB.Open();
+                }
+                catch
+                {
+                    CnxDB = null;
+                }
+
                 return CnxDB;
-            }else{
+            }
+            else
+            {
                 return CnxDB;
             }
         }
-        public MySqlDataReader ExecuteReadQuery(string requete, MySqlConnection conn)
+        public MySqlDataReader ExecuteSelectQuery(string requete)
         {
-            MySqlCommand commande = new MySqlCommand(requete, conn);
+            this.connexion();
+            MySqlCommand commande = new MySqlCommand(requete, CnxDB);
             MySqlDataReader Reader = commande.ExecuteReader();
             return Reader;
         }
