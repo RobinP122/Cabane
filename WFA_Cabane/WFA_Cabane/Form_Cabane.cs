@@ -19,31 +19,37 @@ namespace WFA_Cabane
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+           
 
         private void Form_Cabane_Load(object sender, EventArgs e)
         {
-            MySqlConnection Conn = new MySqlConnection("Database=kyjk_cabaneGroupeC;server=kyjk.myd.infomaniak.com;User Id=kyjk_adminC;pwd=cabane14c");
+
+
+
+            MySqlConnection Conn = new MySqlConnection("Database=cabanes;server=127.0.0.1;User Id=root;pwd=");
             string requete = "SELECT Nom FROM cabanes WHERE idCabane = 1";
 
             try
             {
-               MySqlCommand req = new MySqlCommand(requete, Conn);
-               Conn.Open();
-               MySqlDataReader Requete = req.ExecuteReader();
-               Requete.Read();
-               Lbl_Titre.Text = Requete.GetValue(0).ToString();
+                MySqlCommand req = new MySqlCommand(requete, Conn);
+                Conn.Open();
+                MySqlDataReader Requete = req.ExecuteReader();
+                Requete.Read();
+                Lbl_Titre.Text = Requete.GetValue(0).ToString();
 
-               Conn.Close();
+                Conn.Close();
             }
             catch
             {
-                Lbl_Titre.Text = "Erreur";     
+               Lbl_Titre.Text = "Erreur";
             }
+        }
 
+        private void Btn_Recherche_Click(object sender, EventArgs e)
+        {
+            Form_ListeCabanes ListeCabane = new Form_ListeCabanes();
+            ListeCabane.Show(this);
+            this.Hide();
         }
     }
 }

@@ -73,6 +73,7 @@
             this.Btn_Recherche.TabIndex = 3;
             this.Btn_Recherche.Text = "Faire une recherche";
             this.Btn_Recherche.UseVisualStyleBackColor = true;
+            this.Btn_Recherche.Click += new System.EventHandler(this.Btn_Recherche_Click);
             // 
             // Form_Cabane
             // 
