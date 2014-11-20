@@ -20,7 +20,7 @@ namespace WFA_Cabane
             {
                 try
                 {
-                    CnxDB = new MySqlConnection("Database=cabanes;server=127.0.0.1;User Id=root;pwd=");
+                    CnxDB = new MySqlConnection("Database=cabane_c;server=127.0.0.1;User Id=root;pwd=");
                     CnxDB.Open();
                 }
                 catch
