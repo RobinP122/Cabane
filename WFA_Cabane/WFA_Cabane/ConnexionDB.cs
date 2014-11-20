@@ -39,12 +39,14 @@ namespace WFA_Cabane
         {
             this.connexion();
             MySqlCommand commande = new MySqlCommand(requete, CnxDB);
-            /*int compteur;
-          for (compteur = 0; compteur <= parametres.Count() - 1; compteur++)
-           {
-               commande.Parameters.Add(parametres[compteur]);
-           }*/
-
+            int compteur;
+            if (parametres != null)
+            {
+                for (compteur = 0; compteur <= parametres.Count() - 1; compteur++)
+                {
+                    commande.Parameters.Add(parametres[compteur]);
+                }
+            }            
             MySqlDataReader Reader = commande.ExecuteReader();
             return Reader;
         }

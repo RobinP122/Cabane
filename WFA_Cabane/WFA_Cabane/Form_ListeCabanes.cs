@@ -37,7 +37,7 @@ namespace WFA_Cabane
                 {
                     LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());
                 }
-
+                Reader.Close();
             }
             catch
             {
@@ -50,13 +50,13 @@ namespace WFA_Cabane
             LstBx_ListeCabane.Items.Clear();
             string recherche = TxtBx_Recherche.Text;
             string requete = "select Nom from cabanes where Nom like @Nom";
-            MySqlParameter[] parametres = new MySqlParameter[2];
+            MySqlParameter[] parametres = new MySqlParameter[1];
             parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
             parametres[0].Value = recherche;
             try
             {
                 MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
-                if (Reader.FieldCount <= 0)
+                if (Reader.FieldCount >= 0)
                 {
                     while (Reader.Read())
                     {
@@ -67,7 +67,7 @@ namespace WFA_Cabane
                 {
                     LstBx_ListeCabane.Items.Add("il n'existe pas de résultats pour la recherche \"" + recherche + "\"");
                 }
-
+                Reader.Close();
             }
             catch
             {
