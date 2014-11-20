@@ -24,7 +24,7 @@ namespace WFA_Cabane
             ConnexionDB DB = new ConnexionDB();
 
             //Nom
-            string requete = "SELECT Nom FROM cabanes WHERE @idCabane";
+            string requete = "SELECT Nom, Altitude, Douche, NbLits, GPS, Tarif, Commentaire FROM cabanes WHERE @idCabane;";
             MySqlParameter[] parametres = new MySqlParameter[1];
             parametres[0] = new MySqlParameter("@idCabane", MySqlDbType.Int32, 2);
             parametres[0].Value = 1;
@@ -33,13 +33,17 @@ namespace WFA_Cabane
                 MySqlDataReader reader = DB.ExecuteSelectQuery(requete, parametres);
                 reader.Read();
                 Lbl_Nom.Text = reader["Nom"].ToString();
-
-
+                Lbl_Altitude.Text = reader["Altitude"].ToString();
+                Lbl_Douche.Text = reader["Douche"].ToString();
+                Lbl_NbLits.Text = reader["NbLits"].ToString();
+                Lbl_GPS.Text = reader["GPS"].ToString();
+                Lbl_Tarif.Text = reader["Tarif"].ToString();
+                Edt_Commentaires.Text = reader["Commentaire"].ToString();
                 reader.Close();
             }
             catch(Exception x)
             {
-                Lbl_Nom.Text = "Erreur "+ x.Message;
+                Lbl_Nom.Text = "Erreur / "+ x.Message;
             }
         }
     }

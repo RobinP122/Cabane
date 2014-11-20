@@ -207,6 +207,7 @@
             this.Edt_Commentaires.Location = new System.Drawing.Point(2, 276);
             this.Edt_Commentaires.Multiline = true;
             this.Edt_Commentaires.Name = "Edt_Commentaires";
+            this.Edt_Commentaires.ReadOnly = true;
             this.Edt_Commentaires.Size = new System.Drawing.Size(188, 173);
             this.Edt_Commentaires.TabIndex = 17;
             // 
@@ -292,6 +293,7 @@
             this.Edt_Informations.Location = new System.Drawing.Point(312, 416);
             this.Edt_Informations.Multiline = true;
             this.Edt_Informations.Name = "Edt_Informations";
+            this.Edt_Informations.ReadOnly = true;
             this.Edt_Informations.Size = new System.Drawing.Size(180, 33);
             this.Edt_Informations.TabIndex = 25;
             // 
