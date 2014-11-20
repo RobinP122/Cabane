@@ -32,6 +32,7 @@
             this.Btn_ListeCabane = new System.Windows.Forms.Button();
             this.Btn_ListeContact = new System.Windows.Forms.Button();
             this.Btn_Recherche = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_Titre
@@ -77,11 +78,22 @@
             this.Btn_Recherche.UseVisualStyleBackColor = true;
             this.Btn_Recherche.Click += new System.EventHandler(this.Btn_Recherche_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(221, 390);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 26);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form_Cabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 425);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_Recherche);
             this.Controls.Add(this.Btn_ListeContact);
             this.Controls.Add(this.Btn_ListeCabane);
@@ -99,6 +111,7 @@
         private System.Windows.Forms.Button Btn_ListeCabane;
         private System.Windows.Forms.Button Btn_ListeContact;
         private System.Windows.Forms.Button Btn_Recherche;
+        private System.Windows.Forms.Button button1;
 
     }
 }

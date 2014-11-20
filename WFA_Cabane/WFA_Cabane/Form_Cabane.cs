@@ -25,5 +25,12 @@ namespace WFA_Cabane
             ListeCabane.Show(this);
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form_AfficheDetail AfficheDetail = new Form_AfficheDetail();
+            AfficheDetail.Show(this);
+            this.Hide();
+        }
     }
 }

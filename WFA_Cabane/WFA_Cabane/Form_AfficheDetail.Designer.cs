@@ -35,15 +35,12 @@
             this.Lbl_Nom = new System.Windows.Forms.Label();
             this.Lbl_Altitude = new System.Windows.Forms.Label();
             this.Lbl_GPS = new System.Windows.Forms.Label();
-            this.Lbl_NbLit = new System.Windows.Forms.Label();
+            this.Lbl_NbLits = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.Rb_oui = new System.Windows.Forms.RadioButton();
-            this.Rb_Non = new System.Windows.Forms.RadioButton();
-            this.Cb_Menu = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.Lbl_Tarifs = new System.Windows.Forms.Label();
+            this.Lbl_Tarif = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Edt_Commentaires = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,6 +56,8 @@
             this.Lbl_Web = new System.Windows.Forms.Label();
             this.Lbl_Email = new System.Windows.Forms.Label();
             this.Lbl_Adresse = new System.Windows.Forms.Label();
+            this.Lbl_Menu = new System.Windows.Forms.Label();
+            this.Lbl_Douche = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Img_Cabane)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,14 +129,14 @@
             this.Lbl_GPS.TabIndex = 6;
             this.Lbl_GPS.Text = "GPS";
             // 
-            // Lbl_NbLit
+            // Lbl_NbLits
             // 
-            this.Lbl_NbLit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_NbLit.Location = new System.Drawing.Point(356, 42);
-            this.Lbl_NbLit.Name = "Lbl_NbLit";
-            this.Lbl_NbLit.Size = new System.Drawing.Size(136, 24);
-            this.Lbl_NbLit.TabIndex = 10;
-            this.Lbl_NbLit.Text = "Nombre de lit";
+            this.Lbl_NbLits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_NbLits.Location = new System.Drawing.Point(356, 42);
+            this.Lbl_NbLits.Name = "Lbl_NbLits";
+            this.Lbl_NbLits.Size = new System.Drawing.Size(136, 24);
+            this.Lbl_NbLits.TabIndex = 10;
+            this.Lbl_NbLits.Text = "Nombre de lit";
             // 
             // label7
             // 
@@ -172,41 +171,6 @@
             this.label9.Text = "Nombre de lit";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Rb_oui
-            // 
-            this.Rb_oui.AutoSize = true;
-            this.Rb_oui.Location = new System.Drawing.Point(372, 119);
-            this.Rb_oui.Name = "Rb_oui";
-            this.Rb_oui.Size = new System.Drawing.Size(41, 17);
-            this.Rb_oui.TabIndex = 11;
-            this.Rb_oui.TabStop = true;
-            this.Rb_oui.Text = "Oui";
-            this.Rb_oui.UseVisualStyleBackColor = true;
-            // 
-            // Rb_Non
-            // 
-            this.Rb_Non.AutoSize = true;
-            this.Rb_Non.Location = new System.Drawing.Point(438, 119);
-            this.Rb_Non.Name = "Rb_Non";
-            this.Rb_Non.Size = new System.Drawing.Size(45, 17);
-            this.Rb_Non.TabIndex = 12;
-            this.Rb_Non.TabStop = true;
-            this.Rb_Non.Text = "Non";
-            this.Rb_Non.UseVisualStyleBackColor = true;
-            // 
-            // Cb_Menu
-            // 
-            this.Cb_Menu.FormattingEnabled = true;
-            this.Cb_Menu.Items.AddRange(new object[] {
-            "Menu1",
-            "Menu2",
-            "Menu3",
-            "Menu4"});
-            this.Cb_Menu.Location = new System.Drawing.Point(356, 194);
-            this.Cb_Menu.Name = "Cb_Menu";
-            this.Cb_Menu.Size = new System.Drawing.Size(136, 21);
-            this.Cb_Menu.TabIndex = 13;
-            // 
             // label4
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -215,17 +179,17 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 39);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Tarifs";
+            this.label4.Text = "Tarif";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Lbl_Tarifs
+            // Lbl_Tarif
             // 
-            this.Lbl_Tarifs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Tarifs.Location = new System.Drawing.Point(64, 199);
-            this.Lbl_Tarifs.Name = "Lbl_Tarifs";
-            this.Lbl_Tarifs.Size = new System.Drawing.Size(116, 39);
-            this.Lbl_Tarifs.TabIndex = 15;
-            this.Lbl_Tarifs.Text = "Tarifs";
+            this.Lbl_Tarif.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Tarif.Location = new System.Drawing.Point(64, 199);
+            this.Lbl_Tarif.Name = "Lbl_Tarif";
+            this.Lbl_Tarif.Size = new System.Drawing.Size(116, 39);
+            this.Lbl_Tarif.TabIndex = 15;
+            this.Lbl_Tarif.Text = "Tarif";
             // 
             // label5
             // 
@@ -381,11 +345,31 @@
             this.Lbl_Adresse.Text = "Adresse";
             this.Lbl_Adresse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // Lbl_Menu
+            // 
+            this.Lbl_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Menu.Location = new System.Drawing.Point(356, 195);
+            this.Lbl_Menu.Name = "Lbl_Menu";
+            this.Lbl_Menu.Size = new System.Drawing.Size(136, 24);
+            this.Lbl_Menu.TabIndex = 31;
+            this.Lbl_Menu.Text = "Menu";
+            // 
+            // Lbl_Douche
+            // 
+            this.Lbl_Douche.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Douche.Location = new System.Drawing.Point(356, 119);
+            this.Lbl_Douche.Name = "Lbl_Douche";
+            this.Lbl_Douche.Size = new System.Drawing.Size(136, 24);
+            this.Lbl_Douche.TabIndex = 32;
+            this.Lbl_Douche.Text = "Oui/Non";
+            // 
             // Form_AfficheDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 450);
+            this.Controls.Add(this.Lbl_Douche);
+            this.Controls.Add(this.Lbl_Menu);
             this.Controls.Add(this.Lbl_Adresse);
             this.Controls.Add(this.Lbl_Email);
             this.Controls.Add(this.Lbl_Web);
@@ -401,12 +385,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Edt_Commentaires);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.Lbl_Tarifs);
+            this.Controls.Add(this.Lbl_Tarif);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Cb_Menu);
-            this.Controls.Add(this.Rb_Non);
-            this.Controls.Add(this.Rb_oui);
-            this.Controls.Add(this.Lbl_NbLit);
+            this.Controls.Add(this.Lbl_NbLits);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -419,6 +400,7 @@
             this.Controls.Add(this.Img_Cabane);
             this.Name = "Form_AfficheDetail";
             this.Text = "Form_AfficheDetail";
+            this.Load += new System.EventHandler(this.Form_AfficheDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Img_Cabane)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -434,15 +416,12 @@
         private System.Windows.Forms.Label Lbl_Nom;
         private System.Windows.Forms.Label Lbl_Altitude;
         private System.Windows.Forms.Label Lbl_GPS;
-        private System.Windows.Forms.Label Lbl_NbLit;
+        private System.Windows.Forms.Label Lbl_NbLits;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton Rb_oui;
-        private System.Windows.Forms.RadioButton Rb_Non;
-        private System.Windows.Forms.ComboBox Cb_Menu;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label Lbl_Tarifs;
+        private System.Windows.Forms.Label Lbl_Tarif;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Edt_Commentaires;
         private System.Windows.Forms.Label label6;
@@ -458,5 +437,7 @@
         private System.Windows.Forms.Label Lbl_Web;
         private System.Windows.Forms.Label Lbl_Email;
         private System.Windows.Forms.Label Lbl_Adresse;
+        private System.Windows.Forms.Label Lbl_Menu;
+        private System.Windows.Forms.Label Lbl_Douche;
     }
 }
