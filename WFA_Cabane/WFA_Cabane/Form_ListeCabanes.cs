@@ -49,7 +49,7 @@ namespace WFA_Cabane
         {
             LstBx_ListeCabane.Items.Clear();
             string recherche = TxtBx_Recherche.Text;
-            string requete = "select Nom from cabanes where Nom like @Nom";
+            string requete = "select Nom from cabanes where Nom REGEXP @Nom";
             MySqlParameter[] parametres = new MySqlParameter[1];
             parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
             parametres[0].Value = recherche;
