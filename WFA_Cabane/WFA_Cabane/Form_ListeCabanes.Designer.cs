@@ -51,6 +51,7 @@
             this.TxtBx_Recherche.Name = "TxtBx_Recherche";
             this.TxtBx_Recherche.Size = new System.Drawing.Size(278, 20);
             this.TxtBx_Recherche.TabIndex = 1;
+            this.TxtBx_Recherche.TextChanged += new System.EventHandler(this.TxtBx_Recherche_TextChanged);
             // 
             // groupBox1
             // 

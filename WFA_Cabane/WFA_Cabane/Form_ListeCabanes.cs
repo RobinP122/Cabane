@@ -28,6 +28,7 @@ namespace WFA_Cabane
 
         private void Form_ListeCabanes_Load(object sender, EventArgs e)
         {
+            LstBx_ListeCabane.Items.Clear();
             try
             {
                 DB = new ConnexionDB();
@@ -47,32 +48,44 @@ namespace WFA_Cabane
 
         private void Btn_Recherche_Click(object sender, EventArgs e)
         {
-            LstBx_ListeCabane.Items.Clear();
-            string recherche = TxtBx_Recherche.Text;
-            string requete = "select Nom from cabanes where Nom REGEXP @Nom";
-            MySqlParameter[] parametres = new MySqlParameter[1];
-            parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
-            parametres[0].Value = recherche;
-            try
+            if (TxtBx_Recherche.Text == "")
             {
-                MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
-                if (Reader.FieldCount >= 0)
+                Form_ListeCabanes_Load(sender, e);
+            }
+            else
+            {
+                LstBx_ListeCabane.Items.Clear();
+                string recherche = TxtBx_Recherche.Text;
+                string requete = "select Nom from cabanes where Nom REGEXP @Nom";
+                MySqlParameter[] parametres = new MySqlParameter[1];
+                parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
+                parametres[0].Value = recherche;
+                try
                 {
-                    while (Reader.Read())
+                    MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
+                    if (Reader.FieldCount >= 0)
                     {
-                        LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());
+                        while (Reader.Read())
+                        {
+                            LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());
+                        }
                     }
+                    else
+                    {
+                        LstBx_ListeCabane.Items.Add("il n'existe pas de résultats pour la recherche \"" + recherche + "\"");
+                    }
+                    Reader.Close();
                 }
-                else
+                catch
                 {
-                    LstBx_ListeCabane.Items.Add("il n'existe pas de résultats pour la recherche \"" + recherche + "\"");
+                    LstBx_ListeCabane.Items.Add("recherche impossible");
                 }
-                Reader.Close();
             }
-            catch
-            {
-                LstBx_ListeCabane.Items.Add("recherche impossible");
-            }
+        }
+
+        private void TxtBx_Recherche_TextChanged(object sender, EventArgs e)
+        {
+            Btn_Recherche_Click(sender, e);
         }
     }
 }
