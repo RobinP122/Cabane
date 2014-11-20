@@ -35,13 +35,43 @@ namespace WFA_Cabane
                 MySqlDataReader Reader = DB.ExecuteSelectQuery("select Nom from Cabanes");
                 while (Reader.Read())
                 {
-                    LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());                        
+                    LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());
                 }
-                
+
             }
             catch
             {
-                MessageBox.Show("connexion à la base de données impossible");                
+                MessageBox.Show("connexion à la base de données impossible");
+            }
+        }
+
+        private void Btn_Recherche_Click(object sender, EventArgs e)
+        {
+            LstBx_ListeCabane.Items.Clear();
+            string recherche = TxtBx_Recherche.Text;
+            string requete = "select Nom from cabanes where Nom like @Nom";
+            MySqlParameter[] parametres = new MySqlParameter[2];
+            parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
+            parametres[0].Value = recherche;
+            try
+            {
+                MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
+                if (Reader.FieldCount <= 0)
+                {
+                    while (Reader.Read())
+                    {
+                        LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());
+                    }
+                }
+                else
+                {
+                    LstBx_ListeCabane.Items.Add("il n'existe pas de résultats pour la recherche \"" + recherche + "\"");
+                }
+
+            }
+            catch
+            {
+                LstBx_ListeCabane.Items.Add("recherche impossible");
             }
         }
     }

@@ -43,6 +43,7 @@
             this.Btn_Recherche.TabIndex = 0;
             this.Btn_Recherche.Text = "Rechercher un cabane";
             this.Btn_Recherche.UseVisualStyleBackColor = true;
+            this.Btn_Recherche.Click += new System.EventHandler(this.Btn_Recherche_Click);
             // 
             // TxtBx_Recherche
             // 

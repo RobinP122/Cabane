@@ -35,10 +35,16 @@ namespace WFA_Cabane
                 return CnxDB;
             }
         }
-        public MySqlDataReader ExecuteSelectQuery(string requete)
+        public MySqlDataReader ExecuteSelectQuery(string requete, MySqlParameter[] parametres = null)
         {
             this.connexion();
             MySqlCommand commande = new MySqlCommand(requete, CnxDB);
+            /*int compteur;
+          for (compteur = 0; compteur <= parametres.Count() - 1; compteur++)
+           {
+               commande.Parameters.Add(parametres[compteur]);
+           }*/
+
             MySqlDataReader Reader = commande.ExecuteReader();
             return Reader;
         }
