@@ -63,6 +63,12 @@
     <Compile Include="Form_AfficheDetail.Designer.cs">
       <DependentUpon>Form_AfficheDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_AjoutContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AjoutContact.Designer.cs">
+      <DependentUpon>Form_AjoutContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Cabane.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_AfficheDetail.resx">
       <DependentUpon>Form_AfficheDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AjoutContact.resx">
+      <DependentUpon>Form_AjoutContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Cabane.resx">
       <DependentUpon>Form_Cabane.cs</DependentUpon>
