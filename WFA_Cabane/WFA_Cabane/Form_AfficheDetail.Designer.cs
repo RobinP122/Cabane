@@ -304,7 +304,6 @@
             this.Lbl_Proprietaire.Name = "Lbl_Proprietaire";
             this.Lbl_Proprietaire.Size = new System.Drawing.Size(180, 24);
             this.Lbl_Proprietaire.TabIndex = 26;
-            this.Lbl_Proprietaire.Text = "Propriètaire";
             this.Lbl_Proprietaire.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Lbl_Mobile
@@ -314,7 +313,6 @@
             this.Lbl_Mobile.Name = "Lbl_Mobile";
             this.Lbl_Mobile.Size = new System.Drawing.Size(180, 24);
             this.Lbl_Mobile.TabIndex = 27;
-            this.Lbl_Mobile.Text = "Mobile";
             this.Lbl_Mobile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Lbl_Web
@@ -324,7 +322,6 @@
             this.Lbl_Web.Name = "Lbl_Web";
             this.Lbl_Web.Size = new System.Drawing.Size(180, 24);
             this.Lbl_Web.TabIndex = 28;
-            this.Lbl_Web.Text = "Site Web";
             this.Lbl_Web.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Lbl_Email
@@ -334,7 +331,6 @@
             this.Lbl_Email.Name = "Lbl_Email";
             this.Lbl_Email.Size = new System.Drawing.Size(180, 24);
             this.Lbl_Email.TabIndex = 29;
-            this.Lbl_Email.Text = "Email";
             this.Lbl_Email.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Lbl_Adresse
@@ -344,7 +340,6 @@
             this.Lbl_Adresse.Name = "Lbl_Adresse";
             this.Lbl_Adresse.Size = new System.Drawing.Size(177, 33);
             this.Lbl_Adresse.TabIndex = 30;
-            this.Lbl_Adresse.Text = "Adresse";
             this.Lbl_Adresse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Lbl_Menu
@@ -354,7 +349,6 @@
             this.Lbl_Menu.Name = "Lbl_Menu";
             this.Lbl_Menu.Size = new System.Drawing.Size(136, 24);
             this.Lbl_Menu.TabIndex = 31;
-            this.Lbl_Menu.Text = "Menu";
             // 
             // Lbl_Douche
             // 
@@ -363,7 +357,6 @@
             this.Lbl_Douche.Name = "Lbl_Douche";
             this.Lbl_Douche.Size = new System.Drawing.Size(136, 24);
             this.Lbl_Douche.TabIndex = 32;
-            this.Lbl_Douche.Text = "Oui/Non";
             // 
             // Form_AfficheDetail
             // 
