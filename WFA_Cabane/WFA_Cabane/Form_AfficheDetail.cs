@@ -34,7 +34,15 @@ namespace WFA_Cabane
                 reader.Read();
                 Lbl_Nom.Text = reader["Nom"].ToString();
                 Lbl_Altitude.Text = reader["Altitude"].ToString();
-                Lbl_Douche.Text = reader["Douche"].ToString();
+                if (reader["Douche"] == 1)
+                {
+                    Lbl_Douche.Text = "Oui";
+                }
+                else
+                {
+                    Lbl_Douche.Text = "Non";
+                }
+                
                 Lbl_NbLits.Text = reader["NbLits"].ToString();
                 Lbl_GPS.Text = reader["GPS"].ToString();
                 Lbl_Tarif.Text = reader["Tarif"].ToString();
