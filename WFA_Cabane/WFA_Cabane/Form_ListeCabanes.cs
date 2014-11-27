@@ -87,5 +87,15 @@ namespace WFA_Cabane
         {
             Btn_Recherche_Click(sender, e);
         }
+
+        private void LstBx_ListeCabane_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

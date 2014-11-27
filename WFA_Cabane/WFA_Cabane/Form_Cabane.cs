@@ -21,15 +21,27 @@ namespace WFA_Cabane
 
         private void Btn_Recherche_Click(object sender, EventArgs e)
         {
-            Form_ListeCabanes ListeCabane = new Form_ListeCabanes();
-            ListeCabane.Show(this);
-            this.Hide();
+            
         }
 
         private void btn_detail_Click(object sender, EventArgs e)
         {
             Form_AfficheDetail AfficheDetail = new Form_AfficheDetail();
             AfficheDetail.Show(this);
+            this.Hide();
+        }
+
+        private void Btn_ListeContact_Click(object sender, EventArgs e)
+        {
+            Form_ListeContacts ListeContact = new Form_ListeContacts();
+            ListeContact.Show(this);
+            this.Hide();
+        }
+
+        private void Btn_ListeCabane_Click(object sender, EventArgs e)
+        {
+            Form_ListeCabanes ListeCabane = new Form_ListeCabanes();
+            ListeCabane.Show(this);
             this.Hide();
         }
 

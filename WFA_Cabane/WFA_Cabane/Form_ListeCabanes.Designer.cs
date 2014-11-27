@@ -41,7 +41,7 @@
             this.Btn_Recherche.Name = "Btn_Recherche";
             this.Btn_Recherche.Size = new System.Drawing.Size(136, 23);
             this.Btn_Recherche.TabIndex = 0;
-            this.Btn_Recherche.Text = "Rechercher un cabane";
+            this.Btn_Recherche.Text = "Rechercher une cabane";
             this.Btn_Recherche.UseVisualStyleBackColor = true;
             this.Btn_Recherche.Click += new System.EventHandler(this.Btn_Recherche_Click);
             // 
@@ -62,6 +62,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Liste des Cabanes";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // LstBx_ListeCabane
             // 
@@ -70,6 +71,7 @@
             this.LstBx_ListeCabane.Name = "LstBx_ListeCabane";
             this.LstBx_ListeCabane.Size = new System.Drawing.Size(408, 381);
             this.LstBx_ListeCabane.TabIndex = 0;
+            this.LstBx_ListeCabane.SelectedIndexChanged += new System.EventHandler(this.LstBx_ListeCabane_SelectedIndexChanged);
             // 
             // Form_ListeCabanes
             // 
