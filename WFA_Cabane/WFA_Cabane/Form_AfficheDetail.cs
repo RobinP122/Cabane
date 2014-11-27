@@ -41,7 +41,7 @@ namespace WFA_Cabane
                 MySqlDataReader reader = DB.ExecuteSelectQuery(requete, parametres);
                 reader.Read();
                 Lbl_Nom.Text = reader["Nom"].ToString();
-                Lbl_Altitude.Text = reader["Altitude"].ToString();
+                Lbl_Altitude.Text = reader["Altitude"].ToString();                
                 if (reader["Douche"].ToString() == "True")
                 {
                     Lbl_Douche.Text = "Oui";
