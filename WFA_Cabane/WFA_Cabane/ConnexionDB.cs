@@ -11,21 +11,23 @@ namespace WFA_Cabane
 {
     class ConnexionDB
     {
+        // Initialise la variable.
         static MySqlConnection CnxDB = null;
 
-
+        // Procédure de connexion à la base.
         private MySqlConnection connexion()
         {
             if (CnxDB == null)
             {
-                try
-                {
+                try // Essaie de se connecter à la base.
+
+                {   // Données de connexion.
                     CnxDB = new MySqlConnection("Database=cabanes;server=127.0.0.1;User Id=root;pwd=");
-                    CnxDB.Open();
+                    CnxDB.Open(); // Ouverture de la connexion.
                 }
                 catch
                 {
-                    CnxDB = null;
+                    CnxDB = null; // Si erreur de connexion à la base informe utilisateur.
                 }
 
                 return CnxDB;
@@ -35,18 +37,21 @@ namespace WFA_Cabane
                 return CnxDB;
             }
         }
+        // Procédure qui execute les requêtes de type "SELECT".
         public MySqlDataReader ExecuteSelectQuery(string requete, MySqlParameter[] parametres = null)
         {
             this.connexion();
+            // Prépare la requête.
             MySqlCommand commande = new MySqlCommand(requete, CnxDB);
             int compteur;
             if (parametres != null)
-            {
+            {   // Ajoute les paramètres présent dans le tableau à la requête.
                 for (compteur = 0; compteur <= parametres.Count() - 1; compteur++)
                 {
                     commande.Parameters.Add(parametres[compteur]);
                 }
-            }            
+            }       
+            // Execute la requête.
             MySqlDataReader Reader = commande.ExecuteReader();
             return Reader;
         }
