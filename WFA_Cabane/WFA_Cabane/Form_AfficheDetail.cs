@@ -62,5 +62,10 @@ namespace WFA_Cabane
                 Lbl_Nom.Text = "Erreur / "+ x.Message;
             }
         }
+
+        private void Form_AfficheDetail_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }

@@ -62,7 +62,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Liste des Cabanes";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // LstBx_ListeCabane
             // 
@@ -72,7 +71,6 @@
             this.LstBx_ListeCabane.Name = "LstBx_ListeCabane";
             this.LstBx_ListeCabane.Size = new System.Drawing.Size(408, 381);
             this.LstBx_ListeCabane.TabIndex = 0;
-            this.LstBx_ListeCabane.SelectedIndexChanged += new System.EventHandler(this.LstBx_ListeCabane_SelectedIndexChanged);
             this.LstBx_ListeCabane.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LstBx_ListeCabane_MouseDoubleClick);
             // 
             // Form_ListeCabanes

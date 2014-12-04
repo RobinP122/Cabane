@@ -395,6 +395,7 @@
             this.Controls.Add(this.Img_Cabane);
             this.Name = "Form_AfficheDetail";
             this.Text = "Form_AfficheDetail";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_AfficheDetail_FormClosed);
             this.Load += new System.EventHandler(this.Form_AfficheDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Img_Cabane)).EndInit();
             this.ResumeLayout(false);
