@@ -39,7 +39,7 @@ namespace WFA_Cabane
                 parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50); // Ajoute un paramètre à la variable
                 parametres[0].Value = recherche; // Initialise le paramètre
                 try
-                {
+                {  // Recupère les valeurs selon la requête.
                     MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
                     if (Reader.FieldCount >= 0)
                     {
@@ -49,18 +49,18 @@ namespace WFA_Cabane
                         }
                     }
                     else
-                    {
+                    {   // Message d'information.
                         LstBx_ListeContact.Items.Add("il n'existe pas de résultats pour la recherche \"" + recherche + "\"");
                     }
                     Reader.Close();
                 }
                 catch
-                {
+                {   // Message d'information.
                     LstBx_ListeContact.Items.Add("recherche impossible");
                 }
             }
         }
-
+        
         private void Form_ListeContacts_Load(object sender, EventArgs e)
         {
             LstBx_ListeContact.Items.Clear();
@@ -68,6 +68,7 @@ namespace WFA_Cabane
             {
                 DB = new ConnexionDB();
 
+                // Execute la requête.
                 MySqlDataReader Reader = DB.ExecuteSelectQuery("select Nom from personnes");
                 while (Reader.Read())
                 {
@@ -76,16 +77,17 @@ namespace WFA_Cabane
                 Reader.Close();
             }
             catch
-            {
+            {  // Message d'information.
                 MessageBox.Show("connexion à la base de données impossible");
             }
         }
-
+        // Execute la requête à chaque modification du contenu de l'edit.
         private void TxtBx_Recherche_TextChanged(object sender, EventArgs e)
         {
             Btn_Recherche_Click(sender, e);
         }
 
+        // Affiche le menu principal.
         private void Form_ListeContacts_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Show();
