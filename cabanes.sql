@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `cabanes`
 --
-CREATE DATABASE IF NOT EXISTS `cabanes` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `cabanes` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `cabanes`;
 
 -- --------------------------------------------------------
