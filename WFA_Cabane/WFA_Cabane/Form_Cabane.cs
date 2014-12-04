@@ -25,21 +25,21 @@ namespace WFA_Cabane
         }
 
         private void btn_detail_Click(object sender, EventArgs e)
-        {
+        {   
             Form_AfficheDetail AfficheDetail = new Form_AfficheDetail();
             AfficheDetail.Show(this);
             this.Hide();
         }
 
         private void Btn_ListeContact_Click(object sender, EventArgs e)
-        {
+        {   // Ouvre la liste des contacts.
             Form_ListeContacts ListeContact = new Form_ListeContacts();
             ListeContact.Show(this);
             this.Hide();
         }
 
         private void Btn_ListeCabane_Click(object sender, EventArgs e)
-        {
+        {   // Ouvre la liste des cabanes.
             Form_ListeCabanes ListeCabane = new Form_ListeCabanes();
             ListeCabane.Show(this);
             this.Hide();
