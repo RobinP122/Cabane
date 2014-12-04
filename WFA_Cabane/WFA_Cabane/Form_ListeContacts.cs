@@ -19,10 +19,13 @@ namespace WFA_Cabane
             InitializeComponent();
         }
 
+        // Initialise la connexion.
         ConnexionDB DB;
 
+        // Permet la recherche d'une cabane.
         private void Btn_Recherche_Click(object sender, EventArgs e)
         {
+            // Test si l'edit est vide.
             if (TxtBx_Recherche.Text == "")
             {
                 Form_ListeContacts_Load(sender, e);
@@ -30,11 +33,11 @@ namespace WFA_Cabane
             else
             {
                 LstBx_ListeContact.Items.Clear();
-                string recherche = TxtBx_Recherche.Text;
-                string requete = "select Nom from personnes where Nom REGEXP @Nom";
-                MySqlParameter[] parametres = new MySqlParameter[1];
-                parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
-                parametres[0].Value = recherche;
+                string recherche = TxtBx_Recherche.Text; // Récupère la valeur recherchée.
+                string requete = "select Nom from personnes where Nom REGEXP @Nom"; // Initialise la requete
+                MySqlParameter[] parametres = new MySqlParameter[1]; // Cré une variable pour des paramètres
+                parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50); // Ajoute un paramètre à la variable
+                parametres[0].Value = recherche; // Initialise le paramètre
                 try
                 {
                     MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
