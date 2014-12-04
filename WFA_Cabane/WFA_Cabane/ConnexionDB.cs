@@ -50,5 +50,20 @@ namespace WFA_Cabane
             MySqlDataReader Reader = commande.ExecuteReader();
             return Reader;
         }
+        public MySqlCommand ExecuteQuery(string requete, MySqlParameter[] parametres = null)
+        {
+            this.connexion();
+            MySqlCommand commande = new MySqlCommand(requete, CnxDB);
+            int compteur;
+            if (parametres != null)
+            {
+                for (compteur = 0; compteur <= parametres.Count() - 1; compteur++)
+                {
+                    commande.Parameters.Add(parametres[compteur]);
+                }
+            }
+            commande.ExecuteNonQuery();
+            return commande;
+        }
     }
 }

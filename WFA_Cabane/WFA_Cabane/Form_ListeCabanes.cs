@@ -47,10 +47,11 @@ namespace WFA_Cabane
         }
 
         private void Btn_Recherche_Click(object sender, EventArgs e)
-        {
+        {            
             if (TxtBx_Recherche.Text == "")
             {
                 Form_ListeCabanes_Load(sender, e);
+
             }
             else
             {
