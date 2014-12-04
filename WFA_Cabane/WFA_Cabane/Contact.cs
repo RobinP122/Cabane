@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WFA_Cabane
 {
-    class Contact
+    public class Contact
     {
         public int idPersonne;
         public string Nom;
