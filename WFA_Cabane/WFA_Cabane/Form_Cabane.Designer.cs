@@ -32,6 +32,7 @@
             this.Btn_ListeCabane = new System.Windows.Forms.Button();
             this.Btn_ListeContact = new System.Windows.Forms.Button();
             this.btn_detail = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_Titre
@@ -76,11 +77,22 @@
             this.btn_detail.UseVisualStyleBackColor = true;
             this.btn_detail.Click += new System.EventHandler(this.btn_detail_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(290, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Editer Cabane";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form_Cabane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 425);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_detail);
             this.Controls.Add(this.Btn_ListeContact);
             this.Controls.Add(this.Btn_ListeCabane);
@@ -98,6 +110,7 @@
         private System.Windows.Forms.Button Btn_ListeCabane;
         private System.Windows.Forms.Button Btn_ListeContact;
         private System.Windows.Forms.Button btn_detail;
+        private System.Windows.Forms.Button button1;
 
     }
 }

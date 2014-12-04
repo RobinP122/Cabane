@@ -19,40 +19,38 @@ namespace WFA_Cabane
             InitializeComponent();
         }
 
-<<<<<<< HEAD
-           
-
-=======
->>>>>>> 59cce2b6c4ba866e0410f08536008738954634b6
-        private void Form_Cabane_Load(object sender, EventArgs e)
-        {
-
-
-
-            MySqlConnection Conn = new MySqlConnection("Database=cabanes;server=127.0.0.1;User Id=root;pwd=");
-            string requete = "SELECT Nom FROM cabanes WHERE idCabane = 1";
-
-            try
-            {
-                MySqlCommand req = new MySqlCommand(requete, Conn);
-                Conn.Open();
-                MySqlDataReader Requete = req.ExecuteReader();
-                Requete.Read();
-                Lbl_Titre.Text = Requete.GetValue(0).ToString();
-
-                Conn.Close();
-            }
-            catch
-            {
-               Lbl_Titre.Text = "Erreur";
-            }
-        }
-
         private void Btn_Recherche_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btn_detail_Click(object sender, EventArgs e)
+        {   
+            Form_AfficheDetail AfficheDetail = new Form_AfficheDetail();
+            AfficheDetail.IdCabane = 1;
+            AfficheDetail.Show(this);
+            this.Hide();
+        }
+
+<<<<<<< HEAD
+        private void Btn_ListeContact_Click(object sender, EventArgs e)
+        {   // Ouvre la liste des contacts.
+            Form_ListeContacts ListeContact = new Form_ListeContacts();
+            ListeContact.Show(this);
+            this.Hide();
+        }
+
+        private void Btn_ListeCabane_Click(object sender, EventArgs e)
+        {   // Ouvre la liste des cabanes.
             Form_ListeCabanes ListeCabane = new Form_ListeCabanes();
             ListeCabane.Show(this);
             this.Hide();
+=======
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+>>>>>>> Sprint 2: Editer cabane en cours
         }
+
     }
 }

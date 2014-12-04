@@ -66,12 +66,14 @@
             // 
             // LstBx_ListeCabane
             // 
+            this.LstBx_ListeCabane.DisplayMember = "Nom";
             this.LstBx_ListeCabane.FormattingEnabled = true;
             this.LstBx_ListeCabane.Location = new System.Drawing.Point(6, 34);
             this.LstBx_ListeCabane.Name = "LstBx_ListeCabane";
             this.LstBx_ListeCabane.Size = new System.Drawing.Size(408, 381);
             this.LstBx_ListeCabane.TabIndex = 0;
             this.LstBx_ListeCabane.SelectedIndexChanged += new System.EventHandler(this.LstBx_ListeCabane_SelectedIndexChanged);
+            this.LstBx_ListeCabane.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LstBx_ListeCabane_MouseDoubleClick);
             // 
             // Form_ListeCabanes
             // 

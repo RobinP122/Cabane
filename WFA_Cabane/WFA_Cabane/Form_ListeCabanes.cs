@@ -33,10 +33,13 @@ namespace WFA_Cabane
             {
                 DB = new ConnexionDB();
 
-                MySqlDataReader Reader = DB.ExecuteSelectQuery("select Nom from Cabanes");
+                MySqlDataReader Reader = DB.ExecuteSelectQuery("select idCabane, Nom from Cabanes");
                 while (Reader.Read())
                 {
-                    LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());
+                    Cabane cabane = new Cabane();
+                    cabane.IdCabane = Convert.ToInt32(Reader["idCabane"].ToString());
+                    cabane.Nom = Reader["Nom"].ToString();
+                    LstBx_ListeCabane.Items.Add(cabane);
                 }
                 Reader.Close();
             }
@@ -56,18 +59,24 @@ namespace WFA_Cabane
             {
                 LstBx_ListeCabane.Items.Clear();
                 string recherche = TxtBx_Recherche.Text;
-                string requete = "select Nom from cabanes where Nom REGEXP @Nom";
+                string requete = "select idCabane, Nom from cabanes where Nom REGEXP @Nom";
                 MySqlParameter[] parametres = new MySqlParameter[1];
                 parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
                 parametres[0].Value = recherche;
                 try
                 {
                     MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
+                    
                     if (Reader.FieldCount >= 0)
                     {
                         while (Reader.Read())
                         {
-                            LstBx_ListeCabane.Items.Add(Reader["Nom"].ToString());
+                            Cabane cabane = new Cabane();
+                            cabane.IdCabane = Convert.ToInt32(Reader["idCabane"].ToString());
+                            cabane.Nom = Reader["Nom"].ToString();
+                            LstBx_ListeCabane.Items.Add(cabane);
+
+                            //LstBx_ListeCabane.
                         }
                     }
                     else
@@ -88,13 +97,13 @@ namespace WFA_Cabane
             Btn_Recherche_Click(sender, e);
         }
 
-        private void LstBx_ListeCabane_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+        private void LstBx_ListeCabane_MouseDoubleClick(object sender, MouseEventArgs e)
+        {            
+            Form_AfficheDetail AfficheDetail = new Form_AfficheDetail();
+            Cabane selectedCabane = (Cabane)LstBx_ListeCabane.SelectedItem;
+            AfficheDetail.IdCabane = selectedCabane.IdCabane;
+            AfficheDetail.Show(this);
+            this.Hide();
 
         }
     }

@@ -50,12 +50,16 @@
   <ItemGroup>
     <Compile Include="Cabane.cs" />
     <Compile Include="ConnexionDB.cs" />
+<<<<<<< HEAD
+    <Compile Include="Contact.cs" />
+=======
     <Compile Include="Form_EditerCabane.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_EditerCabane.Designer.cs">
       <DependentUpon>Form_EditerCabane.cs</DependentUpon>
     </Compile>
+>>>>>>> Sprint 2: Editer cabane en cours
     <Compile Include="Form_AfficheDetail.cs">
       <SubType>Form</SubType>
     </Compile>

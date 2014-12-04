@@ -19,29 +19,37 @@ namespace WFA_Cabane
             InitializeComponent();
         }
 
+        private Int32 idCabane;
+
+        public Int32 IdCabane
+        {
+            get { return idCabane; }
+            set { idCabane = value; }
+        }
+
         private void Form_AfficheDetail_Load(object sender, EventArgs e)
         {
             ConnexionDB DB = new ConnexionDB();
 
             //Nom
-            string requete = "SELECT Nom, Altitude, Douche, NbLits, GPS, Tarif, Commentaire FROM cabanes WHERE @idCabane;";
+            string requete = "SELECT Nom, Altitude, Douche, NbLits, GPS, Tarif, Commentaire FROM cabanes WHERE idCabane = @idCabane;";
             MySqlParameter[] parametres = new MySqlParameter[1];
             parametres[0] = new MySqlParameter("@idCabane", MySqlDbType.Int32, 2);
-            parametres[0].Value = 1;
+            parametres[0].Value = idCabane;
             try
             {
                 MySqlDataReader reader = DB.ExecuteSelectQuery(requete, parametres);
                 reader.Read();
                 Lbl_Nom.Text = reader["Nom"].ToString();
                 Lbl_Altitude.Text = reader["Altitude"].ToString();
-                /*if (reader["Douche"] == 1)
+                if (reader["Douche"].ToString() == "True")
                 {
                     Lbl_Douche.Text = "Oui";
                 }
                 else
                 {
                     Lbl_Douche.Text = "Non";
-                }*/
+                }
                 
                 Lbl_NbLits.Text = reader["NbLits"].ToString();
                 Lbl_GPS.Text = reader["GPS"].ToString();

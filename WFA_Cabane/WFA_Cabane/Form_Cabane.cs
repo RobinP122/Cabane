@@ -27,6 +27,7 @@ namespace WFA_Cabane
         private void btn_detail_Click(object sender, EventArgs e)
         {   
             Form_AfficheDetail AfficheDetail = new Form_AfficheDetail();
+            AfficheDetail.IdCabane = 1;
             AfficheDetail.Show(this);
             this.Hide();
         }
@@ -43,6 +44,11 @@ namespace WFA_Cabane
             Form_ListeCabanes ListeCabane = new Form_ListeCabanes();
             ListeCabane.Show(this);
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
 
     }
