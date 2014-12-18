@@ -51,6 +51,18 @@
     <Compile Include="Cabane.cs" />
     <Compile Include="ConnexionDB.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AjoutCabane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AjoutCabane.Designer.cs">
+      <DependentUpon>Form_AjoutCabane.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_EditerCabane.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_AfficheDetail.resx">
       <DependentUpon>Form_AfficheDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AjoutCabane.resx">
+      <DependentUpon>Form_AjoutCabane.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_AjoutContact.resx">
       <DependentUpon>Form_AjoutContact.cs</DependentUpon>
