@@ -84,9 +84,18 @@ namespace WFA_Cabane
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
             ConnexionDB DB = new ConnexionDB();
+            DialogResult dialogResult = MessageBox.Show("Etes vous sur de vouloir supprimer cette cabane ?", "Some Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                string requete = "DELETE FROM cabanes WHERE idCabane = " + idCabane;
+                DB.ExecuteQuery(requete);
 
-            string requete = "DELETE FROM cabanes WHERE idCabane = " + idCabane;
-            DB.ExecuteQuery(requete);
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
             
         }
 

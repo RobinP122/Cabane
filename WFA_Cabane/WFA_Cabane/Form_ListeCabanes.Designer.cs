@@ -62,6 +62,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Liste des Cabanes";
+            this.groupBox1.VisibleChanged += new System.EventHandler(this.Form_ListeCabanes_Load);
             // 
             // LstBx_ListeCabane
             // 
