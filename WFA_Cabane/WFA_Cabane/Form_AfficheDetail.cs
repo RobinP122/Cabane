@@ -83,7 +83,11 @@ namespace WFA_Cabane
 
         private void btnSupprimer_Click(object sender, EventArgs e)
         {
+            ConnexionDB DB = new ConnexionDB();
 
+            string requete = "DELETE FROM cabanes WHERE idCabane = " + idCabane;
+            DB.ExecuteQuery(requete);
+            
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
