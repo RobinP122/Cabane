@@ -235,7 +235,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label5);
             this.Name = "Form_AjoutContact";
-            this.Text = "Form_AjoutContact";
+            this.Text = "Ajout de contact";
             this.ResumeLayout(false);
             this.PerformLayout();
 

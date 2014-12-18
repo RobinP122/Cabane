@@ -66,7 +66,7 @@
             this.Btn_ListeContact.UseVisualStyleBackColor = true;
             this.Btn_ListeContact.Click += new System.EventHandler(this.Btn_ListeContact_Click);
             // 
-            this.button1.Location = new System.Drawing.Point(290, 366);
+            
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(290, 355);

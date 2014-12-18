@@ -24,7 +24,26 @@ namespace WFA_Cabane
             ConnexionDB DB = new ConnexionDB();
 
             string requete = "INSERT INTO personnes(Nom, Prenom, Adresse, NoMobile, Email, SiteWeb) VALUES (@Nom,@Prenom,@Adresse,@NoMobile,@Email,@SiteWeb)";
-            MySqlDataReader reader = DB.ExecuteSelectQuery(requete);
+            MySqlParameter[] parametres = new MySqlParameter[6];
+            parametres[0] = new MySqlParameter("@Nom", MySqlDbType.String, 50);
+            parametres[0].Value = edt_nom.Text;
+
+            parametres[1] = new MySqlParameter("@Prenom", MySqlDbType.String, 50);
+            parametres[1].Value = edt_prenom.Text;
+
+            parametres[2] = new MySqlParameter("@Adresse", MySqlDbType.String, 50);
+            parametres[2].Value = edt_adresse.Text;
+
+            parametres[3] = new MySqlParameter("@NoMobile", MySqlDbType.String, 50);
+            parametres[3].Value = edt_mobile.Text;
+
+            parametres[4] = new MySqlParameter("@Email", MySqlDbType.String, 50);
+            parametres[4].Value = edt_email.Text;
+
+            parametres[5] = new MySqlParameter("@SiteWeb", MySqlDbType.String, 50);
+            parametres[5].Value = edt_web.Text;
+
+            MySqlDataReader reader = DB.ExecuteSelectQuery(requete,parametres);
             reader.Read();
         }
     }
