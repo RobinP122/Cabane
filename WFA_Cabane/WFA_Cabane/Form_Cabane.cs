@@ -54,5 +54,12 @@ namespace WFA_Cabane
             this.Hide();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_AjoutContact AjoutContact = new Form_AjoutContact();
+            AjoutContact.Show(this);
+            this.Hide();
+        }
+
     }
 }
