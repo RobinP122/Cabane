@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Cabane.cs" />
     <Compile Include="ConnexionDB.cs" />
+    <Compile Include="Contact.cs" />
     <Compile Include="Form_EditerCabane.cs">
       <SubType>Form</SubType>
     </Compile>

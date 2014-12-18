@@ -8,6 +8,7 @@ namespace WFA_Cabane
 {
     public class Contact
     {
+      
         private int _idPersonne;
         public int IdPersonne
         {
@@ -51,10 +52,16 @@ namespace WFA_Cabane
         }
 
         private string _SiteWeb;
+
         public string SiteWeb
         {
             get { return _SiteWeb; }
             set { _SiteWeb = value; }
+        }
+       
+        public string toString()
+        {
+            return Nom + " " + Prenom;
         }
     }
 }

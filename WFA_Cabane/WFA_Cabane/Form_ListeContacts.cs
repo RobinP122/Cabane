@@ -22,6 +22,33 @@ namespace WFA_Cabane
         // Initialise la connexion.
         ConnexionDB DB;
 
+        private void Form_ListeContacts_Load(object sender, EventArgs e)
+        {
+            LstBx_ListeContact.Items.Clear();
+            try
+            {
+                DB = new ConnexionDB();
+
+                // Execute la requête.
+                MySqlDataReader Reader = DB.ExecuteSelectQuery("select idPersonne, Nom from personnes");
+                while (Reader.Read())
+                {
+                    Contact contact = new Contact();
+                    contact.IdPersonne = Convert.ToInt32(Reader["idPersonne"].ToString());
+                    contact.Nom = Reader["Nom"].ToString();
+                    
+                   LstBx_ListeContact.Items.Add(contact);
+                   LstBx_ListeContact.DisplayMember = "Nom";
+                   LstBx_ListeContact.ValueMember = "IdPersonne";
+                }
+                Reader.Close();
+            }
+            catch
+            {  // Message d'information.
+                MessageBox.Show("connexion à la base de données impossible");
+            }
+        }
+
         // Permet la recherche d'une cabane.
         private void Btn_Recherche_Click(object sender, EventArgs e)
         {
@@ -34,18 +61,22 @@ namespace WFA_Cabane
             {
                 LstBx_ListeContact.Items.Clear();
                 string recherche = TxtBx_Recherche.Text; // Récupère la valeur recherchée.
-                string requete = "select Nom from personnes where Nom REGEXP @Nom"; // Initialise la requete
+                string requete = "select idPersonne, Prenom , Nom from personnes where Nom REGEXP @Nom"; // Initialise la requete
                 MySqlParameter[] parametres = new MySqlParameter[1]; // Cré une variable pour des paramètres
                 parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50); // Ajoute un paramètre à la variable
                 parametres[0].Value = recherche; // Initialise le paramètre
                 try
                 {  // Recupère les valeurs selon la requête.
                     MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
+                    
                     if (Reader.FieldCount >= 0)
                     {
                         while (Reader.Read())
                         {
-                            LstBx_ListeContact.Items.Add(Reader["Nom"].ToString());
+                            Contact contact = new Contact();
+                            contact.IdPersonne = Convert.ToInt32(Reader["idPersonne"].ToString());
+                            contact.Nom = Reader["Nom"].ToString();
+                            LstBx_ListeContact.Items.Add(contact);
                         }
                     }
                     else
@@ -61,26 +92,6 @@ namespace WFA_Cabane
             }
         }
         
-        private void Form_ListeContacts_Load(object sender, EventArgs e)
-        {
-            LstBx_ListeContact.Items.Clear();
-            try
-            {
-                DB = new ConnexionDB();
-
-                // Execute la requête.
-                MySqlDataReader Reader = DB.ExecuteSelectQuery("select Nom from personnes");
-                while (Reader.Read())
-                {
-                    LstBx_ListeContact.Items.Add(Reader["Nom"].ToString());
-                }
-                Reader.Close();
-            }
-            catch
-            {  // Message d'information.
-                MessageBox.Show("connexion à la base de données impossible");
-            }
-        }
         // Execute la requête à chaque modification du contenu de l'edit.
         private void TxtBx_Recherche_TextChanged(object sender, EventArgs e)
         {

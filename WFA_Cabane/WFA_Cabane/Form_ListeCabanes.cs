@@ -33,13 +33,15 @@ namespace WFA_Cabane
             {
                 DB = new ConnexionDB();
 
-                MySqlDataReader Reader = DB.ExecuteSelectQuery("select idCabane, Nom from Cabanes");
+                MySqlDataReader Reader = DB.ExecuteSelectQuery("select idCabane,Nom from cabanes");
                 while (Reader.Read())
                 {
                     Cabane cabane = new Cabane();
                     cabane.IdCabane = Convert.ToInt32(Reader["idCabane"].ToString());
                     cabane.Nom = Reader["Nom"].ToString();
                     LstBx_ListeCabane.Items.Add(cabane);
+                    LstBx_ListeCabane.DisplayMember = "Nom";
+                    LstBx_ListeCabane.ValueMember = "IdCabane";
                 }
                 Reader.Close();
             }
@@ -58,11 +60,11 @@ namespace WFA_Cabane
             else
             {
                 LstBx_ListeCabane.Items.Clear();
-                string recherche = TxtBx_Recherche.Text;
-                string requete = "select idCabane, Nom from cabanes where Nom REGEXP @Nom";
-                MySqlParameter[] parametres = new MySqlParameter[1];
-                parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50);
-                parametres[0].Value = recherche;
+                string recherche = TxtBx_Recherche.Text; // Récupère la valeur recherchée.
+                string requete = "select idCabane, Nom from cabanes where Nom REGEXP @Nom"; // Initialise la requete
+                MySqlParameter[] parametres = new MySqlParameter[1]; // Cré une variable pour des paramètres
+                parametres[0] = new MySqlParameter("@Nom", MySqlDbType.VarChar, 50); // Ajoute un paramètre à la variable
+                parametres[0].Value = recherche; // Initialise le paramètre
                 try
                 {
                     MySqlDataReader Reader = DB.ExecuteSelectQuery(requete, parametres);
