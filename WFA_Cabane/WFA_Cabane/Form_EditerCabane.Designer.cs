@@ -38,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Img_Cabane = new System.Windows.Forms.PictureBox();
             this.TxtBxNom = new System.Windows.Forms.TextBox();
-            this.TxtBxAltitude = new System.Windows.Forms.TextBox();
+            this.TxtBxGPS = new System.Windows.Forms.TextBox();
             this.NumAltitude = new System.Windows.Forms.NumericUpDown();
             this.RdBtnOui = new System.Windows.Forms.RadioButton();
             this.RdBtnNon = new System.Windows.Forms.RadioButton();
@@ -151,12 +151,12 @@
             this.TxtBxNom.Size = new System.Drawing.Size(136, 20);
             this.TxtBxNom.TabIndex = 49;
             // 
-            // TxtBxAltitude
+            // TxtBxGPS
             // 
-            this.TxtBxAltitude.Location = new System.Drawing.Point(370, 78);
-            this.TxtBxAltitude.Name = "TxtBxAltitude";
-            this.TxtBxAltitude.Size = new System.Drawing.Size(136, 20);
-            this.TxtBxAltitude.TabIndex = 51;
+            this.TxtBxGPS.Location = new System.Drawing.Point(370, 78);
+            this.TxtBxGPS.Name = "TxtBxGPS";
+            this.TxtBxGPS.Size = new System.Drawing.Size(136, 20);
+            this.TxtBxGPS.TabIndex = 51;
             // 
             // NumAltitude
             // 
@@ -236,7 +236,7 @@
             this.Controls.Add(this.RdBtnOui);
             this.Controls.Add(this.NumNbLits);
             this.Controls.Add(this.NumAltitude);
-            this.Controls.Add(this.TxtBxAltitude);
+            this.Controls.Add(this.TxtBxGPS);
             this.Controls.Add(this.TxtBxNom);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtBxCommentaires);
@@ -271,7 +271,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox Img_Cabane;
         private System.Windows.Forms.TextBox TxtBxNom;
-        private System.Windows.Forms.TextBox TxtBxAltitude;
+        private System.Windows.Forms.TextBox TxtBxGPS;
         private System.Windows.Forms.NumericUpDown NumAltitude;
         private System.Windows.Forms.RadioButton RdBtnOui;
         private System.Windows.Forms.RadioButton RdBtnNon;

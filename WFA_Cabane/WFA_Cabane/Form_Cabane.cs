@@ -48,7 +48,10 @@ namespace WFA_Cabane
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            Form_EditerCabane EditerCabane = new Form_EditerCabane();
+            EditerCabane.IdCabane = 1;
+            EditerCabane.Show(this);
+            this.Hide();
         }
 
     }

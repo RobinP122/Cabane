@@ -50,22 +50,46 @@ namespace WFA_Cabane
                 {
                     Lbl_Douche.Text = "Non";
                 }
-                
+
                 Lbl_NbLits.Text = reader["NbLits"].ToString();
                 Lbl_GPS.Text = reader["GPS"].ToString();
                 Lbl_Tarif.Text = reader["Tarif"].ToString();
                 Edt_Commentaires.Text = reader["Commentaire"].ToString();
                 reader.Close();
             }
-            catch(Exception x)
+            catch (Exception x)
             {
-                Lbl_Nom.Text = "Erreur / "+ x.Message;
+                Lbl_Nom.Text = "Erreur / " + x.Message;
             }
         }
 
         private void Form_AfficheDetail_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Owner.Show();
+        }
+
+        private void btnEditer_Click(object sender, EventArgs e)
+        {
+            Form_EditerCabane EditerCabane = new Form_EditerCabane();
+            EditerCabane.IdCabane = idCabane;
+            EditerCabane.Show(this);
+            this.Hide();
+        }
+
+        private void Form_AfficheDetail_VisibleChanged(object sender, EventArgs e)
+        {
+            this.Form_AfficheDetail_Load(this, e);
+        }
+
+        private void btnSupprimer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
         }
     }
 }

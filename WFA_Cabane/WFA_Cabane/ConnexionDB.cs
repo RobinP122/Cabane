@@ -55,7 +55,7 @@ namespace WFA_Cabane
             MySqlDataReader Reader = commande.ExecuteReader();
             return Reader;
         }
-        // Procédure qui execute les requêtes de types "DELETE" & "INSERT".
+        // Procédure qui execute les requêtes de types "UPDATE", "DELETE" & "INSERT".
         public MySqlCommand ExecuteQuery(string requete, MySqlParameter[] parametres = null)
         {
             this.connexion();

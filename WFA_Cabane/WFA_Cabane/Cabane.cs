@@ -58,7 +58,13 @@ namespace WFA_Cabane
             get { return _Commentaire; }
             set { _Commentaire = value; }
         }
-        
 
+        private string _GPS;
+
+        public string GPS
+        {
+            get { return _GPS; }
+            set { _GPS = value; }
+        }
     }
 }

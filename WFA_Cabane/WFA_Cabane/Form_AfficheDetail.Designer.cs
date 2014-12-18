@@ -58,6 +58,9 @@
             this.Lbl_Adresse = new System.Windows.Forms.Label();
             this.Lbl_Menu = new System.Windows.Forms.Label();
             this.Lbl_Douche = new System.Windows.Forms.Label();
+            this.btnRetour = new System.Windows.Forms.Button();
+            this.btnSupprimer = new System.Windows.Forms.Button();
+            this.btnEditer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Img_Cabane)).BeginInit();
             this.SuspendLayout();
             // 
@@ -358,11 +361,44 @@
             this.Lbl_Douche.Size = new System.Drawing.Size(136, 24);
             this.Lbl_Douche.TabIndex = 32;
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(12, 455);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(75, 23);
+            this.btnRetour.TabIndex = 33;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
+            // btnSupprimer
+            // 
+            this.btnSupprimer.Location = new System.Drawing.Point(408, 455);
+            this.btnSupprimer.Name = "btnSupprimer";
+            this.btnSupprimer.Size = new System.Drawing.Size(75, 23);
+            this.btnSupprimer.TabIndex = 34;
+            this.btnSupprimer.Text = "Supprimer";
+            this.btnSupprimer.UseVisualStyleBackColor = true;
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
+            // 
+            // btnEditer
+            // 
+            this.btnEditer.Location = new System.Drawing.Point(315, 455);
+            this.btnEditer.Name = "btnEditer";
+            this.btnEditer.Size = new System.Drawing.Size(75, 23);
+            this.btnEditer.TabIndex = 35;
+            this.btnEditer.Text = "Editer";
+            this.btnEditer.UseVisualStyleBackColor = true;
+            this.btnEditer.Click += new System.EventHandler(this.btnEditer_Click);
+            // 
             // Form_AfficheDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 450);
+            this.ClientSize = new System.Drawing.Size(495, 488);
+            this.Controls.Add(this.btnEditer);
+            this.Controls.Add(this.btnSupprimer);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.Lbl_Douche);
             this.Controls.Add(this.Lbl_Menu);
             this.Controls.Add(this.Lbl_Adresse);
@@ -397,6 +433,7 @@
             this.Text = "Form_AfficheDetail";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_AfficheDetail_FormClosed);
             this.Load += new System.EventHandler(this.Form_AfficheDetail_Load);
+            this.VisibleChanged += new System.EventHandler(this.Form_AfficheDetail_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.Img_Cabane)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -435,5 +472,8 @@
         private System.Windows.Forms.Label Lbl_Adresse;
         private System.Windows.Forms.Label Lbl_Menu;
         private System.Windows.Forms.Label Lbl_Douche;
+        private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.Button btnSupprimer;
+        private System.Windows.Forms.Button btnEditer;
     }
 }
