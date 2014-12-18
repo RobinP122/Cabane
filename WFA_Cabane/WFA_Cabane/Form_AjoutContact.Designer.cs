@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.edt_informations = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -46,25 +44,6 @@
             this.edt_prenom = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // edt_informations
-            // 
-            this.edt_informations.Location = new System.Drawing.Point(121, 191);
-            this.edt_informations.Multiline = true;
-            this.edt_informations.Name = "edt_informations";
-            this.edt_informations.Size = new System.Drawing.Size(180, 33);
-            this.edt_informations.TabIndex = 38;
-            // 
-            // label15
-            // 
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(12, 191);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 33);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "Informations";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
@@ -135,7 +114,7 @@
             // btn_ajouter
             // 
             this.btn_ajouter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ajouter.Location = new System.Drawing.Point(12, 236);
+            this.btn_ajouter.Location = new System.Drawing.Point(12, 211);
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.Size = new System.Drawing.Size(101, 34);
             this.btn_ajouter.TabIndex = 44;
@@ -146,12 +125,13 @@
             // btn_Annuler
             // 
             this.btn_Annuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Annuler.Location = new System.Drawing.Point(200, 236);
+            this.btn_Annuler.Location = new System.Drawing.Point(200, 211);
             this.btn_Annuler.Name = "btn_Annuler";
             this.btn_Annuler.Size = new System.Drawing.Size(101, 34);
             this.btn_Annuler.TabIndex = 45;
             this.btn_Annuler.Text = "Annuler";
             this.btn_Annuler.UseVisualStyleBackColor = true;
+            this.btn_Annuler.Click += new System.EventHandler(this.btn_Annuler_Click);
             // 
             // edt_nom
             // 
@@ -216,7 +196,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(313, 272);
+            this.ClientSize = new System.Drawing.Size(313, 253);
             this.Controls.Add(this.edt_prenom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.edt_web);
@@ -226,8 +206,6 @@
             this.Controls.Add(this.edt_nom);
             this.Controls.Add(this.btn_Annuler);
             this.Controls.Add(this.btn_ajouter);
-            this.Controls.Add(this.edt_informations);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -243,8 +221,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox edt_informations;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;

@@ -46,5 +46,11 @@ namespace WFA_Cabane
             MySqlDataReader reader = DB.ExecuteSelectQuery(requete,parametres);
             reader.Read();
         }
+
+        private void btn_Annuler_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
     }
 }
