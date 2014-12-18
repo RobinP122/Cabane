@@ -23,7 +23,9 @@ namespace WFA_Cabane
         {
             ConnexionDB DB = new ConnexionDB();
 
-            string requete = "INSERT INTO `personnes`(`Nom`, `Prenom`, `Adresse`, `NoMobile`, `Email`, `SiteWeb`) VALUES ([test],[wd],[wqd],[341],[adw],[qqdwawd])";
+            string requete = "INSERT INTO personnes(Nom, Prenom, Adresse, NoMobile, Email, SiteWeb) VALUES (@Nom,@Prenom,@Adresse,@NoMobile,@Email,@SiteWeb)";
+            MySqlDataReader reader = DB.ExecuteSelectQuery(requete);
+            reader.Read();
         }
     }
 }
