@@ -161,6 +161,11 @@
             // NumAltitude
             // 
             this.NumAltitude.Location = new System.Drawing.Point(370, 45);
+            this.NumAltitude.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.NumAltitude.Name = "NumAltitude";
             this.NumAltitude.Size = new System.Drawing.Size(136, 20);
             this.NumAltitude.TabIndex = 56;

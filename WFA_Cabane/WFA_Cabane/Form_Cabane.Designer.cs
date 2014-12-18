@@ -65,7 +65,7 @@
             this.Btn_ListeContact.Text = "Afficher les contacts";
             this.Btn_ListeContact.UseVisualStyleBackColor = true;
             this.Btn_ListeContact.Click += new System.EventHandler(this.Btn_ListeContact_Click);
-            // 
+            //            
             
             // button2
             // 

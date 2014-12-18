@@ -42,7 +42,7 @@ namespace WFA_Cabane
             {
                 MySqlDataReader reader = DB.ExecuteSelectQuery(requete, parametres);
                 reader.Read();
-                EditedCabane = new Cabane();
+                Cabane EditedCabane = new Cabane();
                 EditedCabane.IdCabane = idCabane;
                 EditedCabane.Nom = reader["Nom"].ToString();
                 EditedCabane.Altitude = Convert.ToInt32(reader["Altitude"].ToString());
@@ -77,7 +77,7 @@ namespace WFA_Cabane
                 TxtBxTarif.Text = Convert.ToString(EditedCabane.Tarif);
                 TxtBxCommentaires.Text = EditedCabane.Commentaire;
             }
-            catch (Exception x)
+             catch (Exception x)
             {
 
             }
@@ -160,5 +160,7 @@ namespace WFA_Cabane
             this.Owner.Show();
             this.Close();
         }
+
+
     }
 }
